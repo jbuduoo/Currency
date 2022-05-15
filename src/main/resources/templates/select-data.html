@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+</head>
+<body>
+    <table>  
+        <tr>
+        	<td >ID</td>
+            <td >NAME</td>
+            <td>CODE</td>
+            <td >RATE</td>
+            <td >修改</td>
+            <td >刪除</td>
+        </tr>
+        <tr th:each="list : ${currencys}">
+        	<td th:text="${list.id}"></td>
+            <td th:text="${list.name}"></td>
+            <td th:text="${list.code}"></td>           
+            <td th:text="${list.rate}"></td>
+            <td>
+				<form th:action="@{/currencyUpdate/}+${list.id}" method="post">
+			　　		<input type="hidden" name="_method" value="update"/>
+			　　		<button type="submit" >修改</button> 
+				</form>
+			</td>
+			<td>
+				<form th:action="@{/currencyDel/}+${list.id}" method="post">
+			　　		<input type="hidden" name="_method" value="delete"/>
+			　　		<button type="submit" >删除</button> 
+				</form>
+			</td>
+        </tr>
+	</table> 
+
+	<form action="/add" method="post">
+		新增<br/>
+	    幣別名稱:<input type="text" name="name"/>
+	    幣別代號:<input type="text" name="code"/>
+	    <input type="submit"/>
+	</form>
+	
+	
+</body>
+</html>
+
