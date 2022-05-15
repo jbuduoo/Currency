@@ -13,19 +13,22 @@ Java：8
 
 2. 建立一張幣別與其對應中文名稱的資料表（需附建立 SQL 語法），並提供 查詢 / 新增 / 修改 / 刪除 功能 API。
 ### A:資料表建立在data.aql 裡。 crud的功能寫在CurrencyRepository.java 中
-	
+![image](https://user-images.githubusercontent.com/43243314/168456997-8ab8187c-cc97-46df-bd04-5aab16f52432.png)
 
 
 # 實作內容：
 ## 1. 幣別 DB 維護功能。
 ### A:功能建立在http://localhost:8080/
+![](https://i.imgur.com/nsrfzD8.png)
 ## 2. 呼叫 coindesk 的 API。
 ### A:http://localhost:8080/rest/api/currencyApi.rest
+![](https://i.imgur.com/oErbis8.png)
 ## 3. 呼叫 coindesk 的 API，並進行資料轉換，組成新 API。
 此新 API 提供：
 A. 更新時間（時間格式範例：1990/01/01 00:00:00）。
 B. 幣別相關資訊（幣別，幣別中文名稱，以及匯率）。
 ### A:http://localhost:8080/rest/api/newCurrencyApi.rest
+![](https://i.imgur.com/OFpAv2T.png)
 
 # 請撰寫以下各項功能之單元測試：
 ## 1. 測試呼叫查詢幣別對應表資料 API，並顯示其內容。
