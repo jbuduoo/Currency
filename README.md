@@ -25,7 +25,7 @@ Java：8
 此新 API 提供：
 A. 更新時間（時間格式範例：1990/01/01 00:00:00）。
 B. 幣別相關資訊（幣別，幣別中文名稱，以及匯率）。
-## A:http://localhost:8080/rest/api/newCurrencyApi.rest
+### A:http://localhost:8080/rest/api/newCurrencyApi.rest
 
 # 請撰寫以下各項功能之單元測試：
 ## 1. 測試呼叫查詢幣別對應表資料 API，並顯示其內容。
