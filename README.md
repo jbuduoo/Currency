@@ -36,3 +36,7 @@ B. 幣別相關資訊（幣別，幣別中文名稱，以及匯率）。
 ## 6. 測試呼叫 coindesk API，並顯示其內容。
 ## 7. 測試呼叫資料轉換的 API，並顯示其內容
 ### a: src/tets/java/CurrecyTest.java
+
+![](https://i.imgur.com/tAljU3n.png)
+
+
